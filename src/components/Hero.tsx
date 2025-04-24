@@ -21,29 +21,45 @@ const Hero: React.FC = () => {
 
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50" />
       
-      {/* Decorative elements */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-200 rounded-full opacity-20 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-purple-200 rounded-full opacity-20 blur-3xl"></div>
+      {/* Decorative Blobs */}
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-200 rounded-full opacity-20 blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-purple-200 rounded-full opacity-20 blur-3xl" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          
+          {/* Subheading */}
           <div className="inline-block px-4 py-1 bg-indigo-100 rounded-full text-indigo-700 font-medium text-sm">
             Revolutionizing Bot Interactions
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
-            <span className="inline-flex flex-wrap items-baseline justify-center gap-x-3">
-              <span>AI-Powered Conversations,</span>
-              <span className="text-indigo-600 inline-flex items-baseline">
-                Not&nbsp;<span className="relative">{text}<span className={`absolute right-0 w-0.5 h-full bg-indigo-600 ${isTyping ? 'animate-blink' : ''}`}/></span>
+          
+          {/* Hero Title */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900 break-words">
+            <span className="block">
+              AI-Powered Conversations,
+            </span>
+            <span className="block text-indigo-600 mt-2">
+              Not{' '}
+              <span className="relative inline-block max-w-full break-words">
+                {text}
+                <span
+                  className={`absolute right-0 w-0.5 h-full bg-indigo-600 ${
+                    isTyping ? 'animate-blink' : ''
+                  }`}
+                />
               </span>
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+
+          {/* Subtext */}
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto">
             Transform your Discord and Telegram bots with natural language understanding. 
             Replace clunky slash commands with smooth, conversational AI interactions.
           </p>
+
+          {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
               href="#signup" 
