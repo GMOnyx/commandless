@@ -4,11 +4,11 @@ import useTypewriter from '../hooks/useTypewriter';
 
 const Hero: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  
   const { text, isTyping } = useTypewriter({
     phrases: [
       'Clunky Commands',
       '/start /help /ban...',
-      'Clunky Commands',
     ],
     typingSpeed: 100,
     deletingSpeed: 50,
@@ -22,11 +22,11 @@ const Hero: React.FC = () => {
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-purple-50 opacity-50" />
-      
+
       {/* Decorative Blobs */}
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-200 rounded-full opacity-20 blur-3xl" />
       <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-purple-200 rounded-full opacity-20 blur-3xl" />
-      
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className={`max-w-4xl mx-auto text-center space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
@@ -82,3 +82,5 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
+
